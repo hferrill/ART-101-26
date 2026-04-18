@@ -1,3 +1,10 @@
 p {color:rgb(100, 230, 117);}
 
-html {text-align: center; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}
+span {background-color: rgb(27, 128, 128);}
+
+
+/* select all html tags that have a class highlight_01 */
+.highlight_01 {background-color: rgb(237, 237, 34);}
+.highlight_02 {background-color: blueviolet;}
+
+html {text-align: center; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif }
