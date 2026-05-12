@@ -19,7 +19,7 @@ $("#leafButton").click(  function(){
     count = count +1;
     $("#leafButton").html("yes papa " + count + " times");
 
-});
+
 
 
 
@@ -27,10 +27,15 @@ $("#leafButton").click(  function(){
 
     let currentMood = mainEntity.mood;
 
-    let message = message + "<p>this is" + currentMood + ".</p>";
+    let message = message + "<p>this is" + mainEntity.mood + ".</p>";
     message = message + "<p>My name is " + mainEntity.name + ".</p>";
 message = message + "<p>I am an " + mainEntity.type + ".</p>";
 message = message + "<p>here, have a " + mainEntity.favoriteElement + ".</p>";
 
 
  $("#environment-output").html(message);
+
+  console.log(count);
+    console.log(mainEntity.type);
+    console.log(mainEntity.mood);
+});
