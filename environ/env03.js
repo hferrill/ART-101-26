@@ -4,38 +4,46 @@ let environmentTitle = "that damn creek";
 
 let environmentElements = ["sticky mud", "slimy rocks", "stagnant water", "gnarly tree roots"];
 
-let mainEntity = {
-    name: "Lake Lady",
-    type: "Nymph",
-    mood: "mysterious",
-    favoriteElement: environmentElements[1]
-};
+
 
 let count = 0; 
 
 
-$("#leafButton").click(  function(){
+$("#crAdd").click(  function(){
 
     count = count +1;
-    $("#leafButton").html("yes papa " + count + " times");
+    $("#crAdd").html("yes papa " + count + " times");
+
+ let crName = $("#crName").val();
+    let crColor = $("#crColor").val();
+    let crEyesNum = $("#crEyesNum").val();
+
+    // lets construct html for eyes
+     let crEyesHtml="";
+    for (let i = 0; i < crEyesNum; i++) {
+        crEyesHtml=crEyesHtml+ "<div class='eye'>.</div>";
+    }
+  $( "crAdd" ).click(function() {
+    $( "crAdd" ).css('background', 'green');
+  });
+
+    // test in console
+    console.log(crName, crColor, crEyesNum);
 
 
+    //if vlaues
+    if (crName.length > 3) {
 
-
-
- let arrayPosition = count - 1;
-
-    let currentMood = mainEntity.mood;
-
-    let message = message + "<p>this is" + mainEntity.mood + ".</p>";
-    message = message + "<p>My name is " + mainEntity.name + ".</p>";
-message = message + "<p>I am an " + mainEntity.type + ".</p>";
-message = message + "<p>here, have a " + mainEntity.favoriteElement + ".</p>";
+       $("#creature-list").append(`
+            <div class="creature">
+                <div class="creature-body" style="background-color: ${crColor}"> ${crEyesHtml} ${crMood} </div>
+                <div class="creature-info">${crName}</div>
+            </div>sad
+        `);
 
 
  $("#environment-output").html(message);
 
   console.log(count);
-    console.log(mainEntity.type);
-    console.log(mainEntity.mood);
+  
 });

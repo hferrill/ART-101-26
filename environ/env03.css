@@ -16,3 +16,12 @@ h1 {color: rgb(71, 6, 169); font-family: Impact, Haettenschweiler, 'Arial Narrow
     background: rgb(107, 224, 179);
     padding: 30px;
 }
+
+#style  {
+    background-color: red;
+}
+
+#style:focus {     
+    background-color:yellow;    
+}
+
